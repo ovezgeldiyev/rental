@@ -1,0 +1,220 @@
+.footer {
+  padding: 64px 0 24px;
+  position: relative;
+  overflow: hidden;
+  &__line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1440px;
+    height: 8px;
+    display: flex;
+    img {
+      width: 100%;
+    }
+  }
+  &__inner {
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 128px;
+    }
+    &-main {
+      width: calc(33% - 22px);
+      max-width: 276px;
+      p {
+        letter-spacing: 0.01em;
+        color: #808080;
+      }
+    }
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 202px;
+      margin-bottom: 24px;
+    }
+    &-side {
+      width: calc(67% - 22px);
+      max-width: 687px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    &-links {
+      width: calc(58% - 12px);
+      max-width: 430px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-social {
+      width: calc(42% - 12px);
+      max-width: 216px;
+      display: flex;
+      align-items: center;
+      a {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 24px;
+        &:hover {
+          opacity: 0.7;
+        }
+        &.sm {
+          width: 21px;
+        }
+        &.big {
+          width: 27px;
+        }
+        &:last-child {
+          margin: 0;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+    &-col {
+      width: calc(50% - 8px);
+      max-width: 195px;
+      display: flex;
+      flex-direction: column;
+      h6 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #808080;
+        margin-bottom: 24px;
+      }
+      a {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 17px;
+        color: #565656;
+        margin-bottom: 16px;
+        &:last-child {
+          margin: 0;
+        }
+        &:hover {
+          opacity: 1;
+          color: $secondary;
+        }
+      }
+    }
+    &-copy {
+      padding-top: 24px;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #323232;
+        opacity: 0.5;
+      }
+    }
+    &-terms {
+      display: flex;
+      align-items: center;
+      a {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 150%;
+        letter-spacing: 0.01em;
+        color: #323232;
+        margin-right: 24px;
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          color: $primary;
+        }
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+// 1024px
+@mixin footer-lg-xlg {
+  .footer {
+  }
+}
+// 930px
+@mixin footer-md-lg {
+  .footer {
+    &__inner {
+      &-row {
+        flex-direction: column;
+        margin-bottom: 80px;
+      }
+      &-main {
+        width: 100%;
+        margin-bottom: 44px;
+      }
+      &-side {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+  }
+}
+// 750px
+@mixin footer-sm-md {
+  .footer {
+    &__inner {
+      &-row {
+        margin-bottom: 32px;
+      }
+      &-main {
+        margin-bottom: 32px;
+      }
+      &-side {
+        flex-direction: column;
+      }
+      &-col {
+        width: calc(50% - 15px);
+        h6 {
+          margin-bottom: 16px;
+        }
+      }
+      &-links {
+        width: 100%;
+        margin-bottom: 56px;
+      }
+      &-social {
+        width: 100%;
+        max-width: unset;
+        justify-content: center;
+      }
+      &-copy {
+        flex-direction: column;
+      }
+      &-terms {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
+// 650px
+@mixin footer-sm-md-extra {
+  .footer {
+  }
+}
+// 540px
+@mixin footer-xsm-sm {
+  .footer {
+  }
+}
+// 390px
+@mixin footer-xxxsm-xxsm {
+  .footer {
+  }
+}

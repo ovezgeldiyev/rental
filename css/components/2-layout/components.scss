@@ -1,0 +1,477 @@
+h1 {
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 115%;
+  letter-spacing: -0.01em;
+  color: $primary;
+  span {
+    color: $secondary;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 135%;
+  letter-spacing: -0.01em;
+  color: $primary;
+  &.big {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 115%;
+    letter-spacing: -0.01em;
+    color: $white;
+  }
+  span {
+    color: $secondary;
+  }
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 145%;
+  &.big {
+    font-size: 20px;
+  }
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+h6 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+}
+p {
+  &.big {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 145%;
+  }
+  &.sm {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+  }
+}
+.main {
+  overflow: hidden;
+  padding-top: 72px;
+}
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: $mainFont;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 145%;
+  padding: 16px 32px;
+  border-radius: 8px;
+  &.primary {
+    color: $white;
+    background: $primary;
+  }
+  &.secondary {
+    color: $white;
+    background: #009fee;
+  }
+}
+.lang {
+  display: flex;
+  align-items: center;
+  margin-right: 24px;
+  cursor: pointer;
+  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    .langMenu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .langMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 12px;
+    transform: translateX(-50%);
+    a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: $gray;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+    img {
+      @include fullImage;
+    }
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    color: $gray;
+    transition: 0.3s ease;
+  }
+}
+.currency {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    .currencyMenu {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .currencyMenu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 12px;
+    transform: translateX(-50%);
+    a {
+      display: flex;
+      align-items: center;
+      margin-bottom: 12px;
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: $gray;
+  }
+  svg {
+    width: 24px;
+    height: 24px;
+    color: $gray;
+    transition: 0.3s ease;
+  }
+}
+.input {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  border: 2px solid #e7e7e7;
+  border-radius: 12px;
+  overflow: hidden;
+  &__outer {
+    margin-bottom: 24px;
+    p {
+      font-weight: 400;
+      color: #9f9f9f;
+    }
+  }
+  &__label {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    h5 {
+      font-weight: 500;
+      color: #808080;
+    }
+    svg {
+      width: 8px;
+      height: 8px;
+      color: #808080;
+      margin: 0 4px;
+    }
+  }
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: $mainFont;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #323232;
+    background-color: $white;
+    padding: 16px 72px 16px 40px;
+    &::placeholder {
+      color: #323232;
+    }
+  }
+  span {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+    img {
+      width: 100%;
+    }
+  }
+  button {
+    position: relative;
+    z-index: 2;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #009fee;
+    cursor: pointer;
+    transition: 0.3s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
+.locFinder {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+  background: $white;
+  border: 1px solid #e7e7e7;
+  box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+    padding: 24px;
+    display: none;
+    z-index: 9999;
+    &.active {
+      display: flex;
+      animation: fadeIn 0.4s;
+    }
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    border-bottom: 1px solid #e7e7e7;
+    h3 {
+      font-weight: 700;
+      color: #323232;
+    }
+  }
+  &__close {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    img {
+      width: 100%;
+      pointer-events: none;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__body {
+    padding: 24px;
+    display: none;
+    &.active {
+      animation: fadeIn 0.3s ease;
+      display: block;
+    }
+    .input {
+      &__label {
+        h5 {
+          cursor: pointer;
+          @include transition;
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+  &__country {
+    li {
+      display: flex;
+      button {
+        width: 100%;
+        font-family: $mainFont;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        padding: 16px;
+        border-radius: 8px;
+        background-color: transparent;
+        transition: 0.3s ease;
+        &:hover {
+          opacity: 1;
+          background-color: #f5f5f5;
+        }
+        span {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 8px;
+          img {
+            width: 100%;
+          }
+        }
+        h5 {
+          width: calc(100% - 48px);
+          font-weight: 500;
+          color: #323232;
+          text-align: start;
+        }
+        svg {
+          width: 14px;
+          height: 14px;
+          color: #565656;
+          margin: 0 0 0 auto;
+        }
+      }
+    }
+  }
+  &__list {
+    li {
+      display: flex;
+      button {
+        width: 100%;
+        font-family: $mainFont;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin-bottom: 4px;
+        padding: 8px;
+        background-color: transparent;
+        transition: 0.3s ease;
+        &:hover {
+          opacity: 1;
+          h5 {
+            color: $secondary;
+            animation: slideLeft 0.4s ease;
+          }
+          svg {
+            color: $secondary;
+            animation: slideLeft 0.4s ease;
+            animation-delay: 0.1s;
+          }
+        }
+        h5 {
+          color: #565656;
+          font-weight: 400;
+          line-height: 150%;
+          transition: 0.3s ease;
+        }
+        svg {
+          width: 12px;
+          height: 12px;
+          color: #565656;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

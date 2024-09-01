@@ -1,0 +1,193 @@
+// 1450px
+@include xxxxlg-xxxxxlg {
+  // @include intro-xxxxlg-xxxxxlg;
+}
+// 1380px
+@include xxxlg-xxxxlg {
+  h1 {
+    font-size: 65px;
+  }
+  h2 {
+    &.big {
+      font-size: 65px;
+    }
+  }
+  @include intro-xxxlg-xxxxlg;
+}
+// 1250px
+@include xlg-xxlg-extra {
+  @include intro-xlg-xxlg-extra;
+}
+// 1180px
+@include xlg-xxlg {
+  .auto__container {
+    padding: 0 30px;
+  }
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 44px;
+    &.big {
+      font-size: 60px;
+    }
+  }
+  @include intro-xlg-xxlg;
+  @include needs-xlg-xxlg;
+  @include promotion-xlg-xxlg;
+  @include rewards-xlg-xxlg;
+  @include reviews-xlg-xxlg;
+  @include roadmap-xlg-xxlg;
+  @include faq-xlg-xxlg;
+  @include articles-xlg-xxlg;
+  @include destination-xlg-xxlg;
+}
+// 1024px
+@include lg-xlg {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 40px;
+    &.big {
+      font-size: 55px;
+    }
+  }
+  p {
+    &.big {
+      font-size: 16px;
+    }
+  }
+  .button {
+    &.secondary {
+      font-size: 18px;
+    }
+  }
+  @include header-lg-xlg;
+  @include nav-lg-xlg;
+  @include intro-lg-xlg;
+  @include promotion-lg-xlg;
+  @include rewards-lg-xlg;
+  @include roadmap-lg-xlg;
+  @include destination-lg-xlg;
+}
+// 930px
+@include md-lg {
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    font-size: 36px;
+    &.big {
+      font-size: 50px;
+    }
+  }
+  @include intro-md-lg;
+  @include needs-md-lg;
+  @include rewards-md-lg;
+  @include roadmap-md-lg;
+  @include faq-md-lg;
+  @include articles-md-lg;
+  @include footer-md-lg;
+}
+// 840px
+@include md-lg-extra {
+  @include destination-md-lg-extra;
+  @include roadmap-md-lg-extra;
+}
+// 750px
+@include sm-md {
+  .auto__container {
+    padding: 0 24px;
+  }
+  h1 {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 32px;
+    &.big {
+      font-size: 45px;
+    }
+  }
+
+  @include intro-sm-md;
+  @include promotion-sm-md;
+  @include rewards-sm-md;
+  @include faq-sm-md;
+  @include destination-sm-md;
+  @include footer-sm-md;
+}
+// 650px
+@include sm-md-extra {
+  h1 {
+    font-size: 40px;
+  }
+  h2 {
+    &.big {
+      font-size: 40px;
+    }
+  }
+  @include intro-sm-md-extra;
+  @include promotion-sm-md-extra;
+  @include rewards-sm-md-extra;
+  @include reviews-sm-md-extra;
+  @include roadmap-sm-md-extra;
+  @include articles-sm-md-extra;
+}
+// 540px
+@include xsm-sm {
+  .locFinder {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    max-width: unset;
+    &__wrapper {
+      padding: 0;
+    }
+  }
+  .daterangepicker {
+    position: fixed;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: unset;
+    overflow-y: auto;
+    .drp-calendar {
+      width: 100%;
+      max-width: 340px;
+      margin: 0 auto;
+      &.left {
+        margin-bottom: 20px !important;
+      }
+      &.right {
+        padding: 0 !important;
+        .calendar-time {
+          width: 100%;
+        }
+      }
+    }
+
+    .calendar-time {
+      width: 100%;
+    }
+  }
+  @include header-xsm-sm;
+  @include nav-xsm-sm;
+  @include intro-xsm-sm;
+  @include needs-xsm-sm;
+  @include roadmap-xsm-sm;
+  @include destination-xsm-sm;
+}
+// 440px
+@include xxsm-xsm {
+  @include intro-xxsm-xsm;
+}
+// 390px
+@include xxxsm-xxsm {
+  // @include intro-xxxsm-xxsm;
+}
